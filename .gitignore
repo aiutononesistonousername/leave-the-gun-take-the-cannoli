@@ -1,0 +1,24 @@
+# Ambienti virtuali
+.venv/
+env/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# File scaricati dalle fonti (rigenerabili con `python main.py --refresh`)
+data/raw/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Estratto SIPRI: non ridistribuibile oltre il 10% del dataset (termini SIPRI); si rigenera con `python main.py`
+data/processed/sipri_milex.csv

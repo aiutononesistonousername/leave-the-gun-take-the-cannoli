@@ -1,0 +1,27 @@
+[project]
+name = "leave-the-gun-take-the-cannoli"
+version = "0.1.0"
+description = "Spesa militare europea e italiana a confronto con sanità e istruzione, con proiezioni al 2035 (obiettivo NATO 5% del PIL)."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+    "requests>=2.31",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 160
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = ["E501"]  # testi italiani lunghi nelle stringhe di grafici e riepilogo
